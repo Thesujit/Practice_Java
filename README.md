@@ -1,58 +1,90 @@
-Java String Manipulation – Learning & Practice
+# Java Algorithms & Data Structures Practice 🚀
 
-This repository contains all the Java programs I created while learning String manipulation, String methods, StringBuilder/StringBuffer, and common interview-based string problems.
-It is a collection of simple, beginner-friendly programs that helped me improve my Java fundamentals and problem-solving skills.
+A curated and optimized collection of **Java implementations of core algorithms and data structures**, designed for **logic building, interview preparation, and strong DSA fundamentals**.
 
-📌 Topics Covered
+This repository demonstrates clean coding practices, algorithmic thinking, and problem-solving skills using Java.
 
-String creation and initialization
+---
 
-Mutable vs Immutable Strings
+## 🔥 Highlights
 
-String methods (length, charAt, substring, equals, compareTo, indexOf, etc.)
+- Clean & beginner-friendly Java code
+- Covers **DSA fundamentals frequently asked in interviews**
+- Focus on **time & space complexity awareness**
+- Ideal for **students, freshers, and placement preparation**
 
-StringBuilder and StringBuffer
+---
 
-Reversing strings
+## 📚 Algorithm Coverage
 
-Checking palindrome
+### 🔁 Sorting Algorithms
+- **Bubble Sort**
+- **Insertion Sort**
+- **Selection Sort**
 
-Removing duplicate characters
+---
 
-Counting vowels and consonants
+### 🔍 Searching Algorithms
+- **Linear Search**
+- **Binary Search (Sorted Array)**
 
-Word and character frequency
+---
 
-Splitting and joining strings
+### 📊 Arrays & Subarrays
+- Largest & Smallest Element
+- Reverse Array (In-Place)
+- All Subarrays & Pairs
+- Maximum Subarray Sum  
+  - Brute Force  
+  - Prefix Sum Optimization
+- 2D Arrays (Input / Output)
+- Diagonal Sum of Matrix
 
-Common interview questions on strings
+---
 
-📂 Repository Structure
-src/
- ├─ ReverseString.java
- ├─ PalindromeCheck.java
- ├─ RemoveDuplicates.java
- ├─ StringMethods.java
- ├─ StringBuilderExamples.java
- ├─ StringBufferExamples.java
- ├─ WordCount.java
- ├─ CharacterFrequency.java
- └─ MorePrograms...
+### 🔄 Recursion
+- Factorial
+- Fibonacci Series
+- First & Last Occurrence
+- Check if Array is Sorted
+- Sum of N Natural Numbers
 
-🧠 Purpose of This Repository
+---
 
-To practice and understand Java String concepts
+### 🔤 String Algorithms
+- Palindrome Check
+- Substring Extraction
+- Title Case Conversion
+- Lexicographically Largest String
 
-To improve logic building
+---
 
-To prepare for interviews and coding rounds
+### 🔺 Pattern Printing
+- Floyd’s Triangle
+- Hollow Rectangle
+- Inverted Triangle
+- Half Inverted Number Pattern
 
-To maintain my learning progress on GitHub
+---
 
-🛠 Technologies Used
+### 🧮 Matrix & Logical Problems
+- Spiral Matrix Traversal
+- Trapping Rainwater Problem
+- Buy & Sell Stock (Max Profit – Single Transaction)
+- Direction-Based Distance Calculation (N/S/E/W)
 
-Java (JDK 21/17)
+---
 
-VS Code / IntelliJ IDEA
+## ⚙️ Tech Stack
 
-Git & GitHub
+- **Language:** Java  
+- **JDK:** 8+  
+- **IDE:** VS Code / IntelliJ / Eclipse  
+
+---
+
+## ▶️ How to Run
+
+```bash
+javac FileName.java
+java FileName
