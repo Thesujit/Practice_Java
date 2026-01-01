@@ -1,6 +1,4 @@
 
-import java.util.stream.Stream;
-
 public class cordinates {
     public static float getPath (String path){
         int x =0, y=0;
