@@ -120,6 +120,82 @@ public class linkedlist {
         size--;
         return val;
     }
+    public void reverse(){
+        Node prev = null;
+        Node curr= tail= head;
+        Node next;
+
+        while(curr != null){
+            next = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = next;
+        }
+        head = prev;
+    }
+    public void deletenthfromEnd ( int n) {
+        // calculate size
+        int sz= 0;
+        Node temp  = head;
+        while(temp != null){
+            temp= temp.next;
+            sz++;
+        }
+        if ( n == sz) {
+            head= head.next; //removeFirst
+            return;
+        }
+        //sz-n
+        int i =1;
+        int iToFind =sz-n;
+        Node prev = head;
+        while(i<iToFind){
+            prev = prev.next;
+            i++;
+        }
+        prev.next = prev.next.next;
+        return;
+     }
+
+     //Check if LL is a palindrome
+     public Node findMid(Node head){
+        Node slow = head;
+        Node fast = head;
+        
+        while(fast != null || fast.next != null){
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        return slow;
+     }
+     public boolean checkPalindrome() {
+        if ( head == null || head.next == null) {
+            return true;
+        }
+        //find middle
+        Node mid = findMid(head);
+
+        //Reverse 2nd half
+        Node curr= mid;
+        Node prev= null;
+        while(curr != null){
+            Node next = curr.next;
+            curr.next = prev;
+            prev= curr;
+            curr= next;
+        }
+        Node right = prev;
+        Node left = head;
+        //check if equal
+        while(right != null){
+            if(left.data != right.data){
+                return false;
+            }
+            left = left.next;
+            right= right.next;
+        }
+        return true;
+     }
 
     public static void main(String[] args) {
         linkedlist ll = new linkedlist();
@@ -137,5 +213,13 @@ public class linkedlist {
         ll.print();
 
         System.out.println("Size = " + size);
+        ll.reverse();
+        System.out.println();
+        ll.print();
+
+        ll.deletenthfromEnd(3);
+        ll.print();
+
+        System.out.println(ll.checkPalindrome());
     }
 }
