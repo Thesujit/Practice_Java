@@ -14,3 +14,4 @@ public class gridways {
     int n=3, m=3;
     System.out.println(gridways(0,0,n,m));
 }}
+//(n-1)!+(m-1)!/(n-1)+(M-1)//
