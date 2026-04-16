@@ -75,7 +75,25 @@ public class lowestcommon{
         int dist2 = lcaDist(root(lca, n2));
         return dist1 +  dist2;
     }
+    public static int KAncestor (Node root , int n , int k){
+        if(root== null){
+         return -1;   
+        }
+        if(root.data == n){
+            return 0;
+        }
+        int leftDist = Kancestor(root.left,n,k);
+        int rightDist = Kancestor(root.right, n, k);
 
+        if(leftDist ==-1 && rightDist ==-1){
+            return -1;
+        }
+        int mamx = Math.max(leftDist, rightDist);
+        if(max+1 ==k){
+            System.out.println(root.data);
+        }
+        return max+1;
+    }
 
     public static void main(String args[]){
         Node root = new Node(1);
@@ -86,7 +104,9 @@ public class lowestcommon{
         root.right.left = new Node(6);
         root.right.right = new Node(7);
 
-        int n1= 4, n2=7;
+        int n1= 4, n2=7;k =2;
         System.out.println(lca(root, n1, n2).data);
         System.out.println(minDist(root, n1, n2));
-}
+
+        System.out.println(root,n, k);
+} 
