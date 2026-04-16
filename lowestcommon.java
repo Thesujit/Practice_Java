@@ -94,6 +94,24 @@ public class lowestcommon{
         }
         return max+1;
     }
+    public static void transform(Node root){
+        int leftChild = transform(root.left);
+        int rightChild = transform(root.right);
+
+        int data= root.data;
+        int newLeft == root.left == null ?0: root.left.data;
+        int newRight == root.right == null ?0 :root.right.data;
+        root.data= newLeft + leftChild + newRight + righChild;
+        return data;
+    }
+    public static void preorder(Node root){
+        if(root == null){
+            return;
+        }
+        System.out.print(root.data+" ");
+        preorder(root.left);
+        preorder(root.right);
+    }
 
     public static void main(String args[]){
         Node root = new Node(1);
@@ -109,4 +127,6 @@ public class lowestcommon{
         System.out.println(minDist(root, n1, n2));
 
         System.out.println(root,n, k);
+        transform(root);
+        preorder(root);
 } 
