@@ -1,3 +1,4 @@
+import java.util.*;
 public class binaryserarchtree{
     static class Node {
         int data;
@@ -93,6 +94,28 @@ public class binaryserarchtree{
             printInRange(root.right,k1,k2);
         }
     }
+pulbic static void printPathi(ArrayList<Integer>path)}{
+    for(int i=0; i<path.size(); i++){
+        System.out.print(path.get(i)+" ");
+    }
+    System.out.println("null");
+}
+
+    public static void printRoot2Leaf(Node root, ArrayList<Integer> path){
+        if(root == null){
+            return ;
+        }
+        
+        path.add(rood.data);{
+            if(root.left == null && root.right == null){
+                printPath(path);
+            }
+        }
+        path.add(root.data);
+        printRoot2Leaf(root.left , path);
+        printRoot2Leaf(root.right, path);
+        path.remove(path.size()-1);
+    }
 
     public static void main(String args[]){
         int values[]={5,1,3,4,2,7};
@@ -114,6 +137,6 @@ public class binaryserarchtree{
         inorder (root);
 
         printInRange(root, 5,7);
-    }
 
-}
+        printRoot2Leaf(root, new ArraList<>());
+    }
