@@ -117,6 +117,20 @@ pulbic static void printPathi(ArrayList<Integer>path)}{
         path.remove(path.size()-1);
     }
 
+    public static boolean isValidBST(Node root, Node min, Node max){
+        if(root == null){
+            return true;
+        }
+        if(min != null && root.data <= min.data){
+            return false;
+        } 
+        else if (max!= null && roo.data> = max.data){
+                return false;
+            }
+            return isValidBST(root.left, min, root)&& isValidBST(root.right , root, max);
+        }
+
+
     public static void main(String args[]){
         int values[]={5,1,3,4,2,7};
         Node root= null;
@@ -139,4 +153,10 @@ pulbic static void printPathi(ArrayList<Integer>path)}{
         printInRange(root, 5,7);
 
         printRoot2Leaf(root, new ArraList<>());
+
+        if(isValidBST(root, null, null)){
+            System.out.println("valid");
+        }else{
+            System.out.println("not valid");
+        }
     }
